@@ -5,13 +5,6 @@ A Rust-powered download manager built for speed, flexibility, and integration wi
 
 ## Installation
 
-Either:
-
-```bash
-curl -sSf https://raw.githubusercontent.com/theunrealtarik/fget/refs/heads/main/install.sh | bash
-```
-Or:
-
 1. Download a pre-built binary from the [Releases](https://github.com/theunrealtark/fget/releases) page, or compile it yourself (see below).
 2. Move the binary to a directory in your `$PATH`, such as `/usr/local/bin` or `/usr/bin`.
 

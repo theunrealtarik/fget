@@ -18,20 +18,15 @@ chrome.runtime.onMessage.addListener((message: AppMessageData<string>) => {
   }
 })
 
-chrome.downloads.onCreated.addListener(async (item) => {
-  try {
-
-    let response = await fetch(`http://${HOST}:${PORT}/`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        url: item.url,
-        final_url: item.finalUrl
-      } as Payload)
-    })
-
-    console.log(response)
-
+chrome.downloads.onCreated.addListener((item) => {
+  fetch(`http://${HOST}:${PORT}/`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      url: item.url,
+      final_url: item.finalUrl
+    } as Payload)
+  }).then(async () => {
     chrome.downloads.setShelfEnabled(false);
     await chrome.downloads.cancel(item.id)
     await chrome.downloads.erase({ id: item.id })
@@ -40,7 +35,5 @@ chrome.downloads.onCreated.addListener(async (item) => {
       lastClickedHref: "",
       lastClickedTime: null
     }
-  } catch (err) {
-    console.log(err)
-  }
+  }).catch(console.log)
 })
