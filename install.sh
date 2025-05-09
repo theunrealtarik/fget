@@ -2,7 +2,7 @@
 
 set -e
 
-BINARY_URL="https://github.com/theunrealtarik/fget/install.sh"
+BINARY_URL="https://github.com/theunrealtarik/fget"
 BINARY_NAME="fget"
 DEST="/usr/bin/$BINARY_NAME"
 

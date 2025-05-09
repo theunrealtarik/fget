@@ -3,8 +3,6 @@
 
 A Rust-powered download manager built for speed, flexibility, and integration with modern workflows.
 
----
-
 ## Installation
 
 Either:
@@ -15,7 +13,6 @@ curl -sSf https://raw.githubusercontent.com/theunrealtarik/fget/refs/heads/main/
 Or:
 	1. Download a pre-built binary from the [Releases](https://github.com/theunrealtark/fget/releases) page, or compile it yourself (see below).
 	2. Move the binary to a directory in your `$PATH`, such as `/usr/local/bin` or `/usr/bin`.
-
 
 ## Usage
 
@@ -43,8 +40,6 @@ sh build.sh
 
 Make sure you have Rust installed via [rustup](https://rustup.rs).
 
----
-
 ## Features
 
 * CLI-based download manager
@@ -52,8 +47,6 @@ Make sure you have Rust installed via [rustup](https://rustup.rs).
 * Smart filename resolution
 * File conflict handling with user prompts
 * Clean progress bar UI with `cliclack`
-
----
 
 ## Links
 
